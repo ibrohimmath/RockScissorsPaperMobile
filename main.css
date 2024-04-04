@@ -147,7 +147,7 @@ svg {
   position: absolute;
   top: calc(50% - 8px);
   left: 50%;
-  transform: translateY(-100%) scaleY(-1);
+  transform: translateY(-100%) rotate(180deg);
 }
 
 .score--first {
