@@ -1,0 +1,168 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "open-sans", sans-serif;
+}
+
+svg {
+  display: block;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.modal__overlay {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(128, 128, 128, 0.34);
+}
+
+.modal {
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15vw;
+  padding: 10px;
+  border-radius: 5px;
+  background: white !important;
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.modal__close {
+  font-size: 20px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.answer {
+  text-align: center;
+}
+
+.main {
+  height: calc(100vh);
+  position: relative;
+  background: rgb(22, 19, 56);
+}
+
+.element {
+  transition-duration: 0.5s;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+
+.row--up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.row--down {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateY(-100%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.player--second {
+  transform: rotate(180deg);
+}
+
+.player--second:hover, .player--second:active {
+  transform: rotate(180deg) translateY(-10px);
+}
+
+.player--first:hover, .player--first:active {
+  transform: translateY(-10px);
+}
+
+.line {
+  width: 60px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  background: red;
+}
+
+.games--status {
+  z-index: 4;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%) rotate(270deg);
+  color: red;
+  text-align: center;
+}
+
+.scores {
+  border: 1px solid red;
+  padding: 10px;
+}
+
+.scores p:not(:first-of-type) {
+  margin-top: 10px;
+}
+
+.gamers__scores {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.btn--state {
+  color: white;
+  background: green;
+  padding: 10px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.btn--state:hover {
+  background: rgb(4, 163, 4);
+}
+
+.score--second {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: 50%;
+  transform: translateY(-100%) scaleY(-1);
+}
+
+.score--first {
+  position: absolute;
+  top: calc(50% + 8px);
+  left: 50%;
+}
+
+.score--first, .score--second {
+  color: red;
+  font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+  .modal {
+    width: 45vw;
+  }
+}
